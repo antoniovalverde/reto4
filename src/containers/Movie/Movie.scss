@@ -1,0 +1,14 @@
+.movie{
+    display: flex;
+    flex-direction: column;
+    padding: 0.8em;
+    margin: 0.8em;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.3em;
+    background-color: grey;
+
+    img{
+        width: 80%;
+    }
+}
