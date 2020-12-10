@@ -9,9 +9,6 @@ const Menu = props =>{
                         <span className="populares">Películas Populares</span>
                     </NavLink>
                 </div>
-                <div className="listado">
-                    Listado
-                </div>
             </div>
 }
 
