@@ -12,7 +12,7 @@ function App() {
         <Header/>
         <Menu/>
         <Switch>
-          <Route path="/:movieType" component={Movies} exact/>
+          <Route path="/:movieType/:title?" component={Movies} exact/>
         </Switch>
         <Footer/>
       </BrowserRouter>
