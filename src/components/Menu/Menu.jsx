@@ -1,10 +1,12 @@
-import React, {useState} from 'react';
+import axios from 'axios';
+import React, {useEffect, useState} from 'react';
 import { NavLink } from 'react-router-dom';
 import './Menu.scss';
 
 const Menu = props =>{
     const [titulo, setTitulo] = useState();
-    const [genero, setGenero] = useState('Acción');
+    const [genero, setGenero] = useState('37');
+    const [listado, setListado] = useState([]);
 
     const handleChangeT = e => {
         setTitulo(e.target.value) 
@@ -14,7 +16,19 @@ const Menu = props =>{
         setGenero(e.target.value) 
     }
 
-    let url_titulo = `/titulo/${titulo}`; 
+    useEffect(() => {
+        axios.get(`https://api.themoviedb.org/3/genre/movie/list?api_key=f6c510b3b52b2f6efd5ed11ca30c9c4d&language=es-ES`)
+        .then(res => setListado(res.data.genres))
+        .catch(console.error)
+    });
+
+    let url_titulo = '';
+
+    if(titulo !== ''){
+        url_titulo = `/titulo/${titulo}`; 
+    }else{
+        url_titulo = `/titulo/undefined`;
+    }
     let url_genero = `/genero/${genero}`; 
 
     return <div className="main">
@@ -29,14 +43,8 @@ const Menu = props =>{
                         </NavLink>
                     </div>
                     <div>
-                        <select value={genero} onChange={handleChangeG}>
-                            <option>Acción</option>
-                            <option>Aventura</option>
-                            <option>Animación</option>
-                            <option>Comedia</option>
-                            <option>Crimen</option>
-                            <option>Documental</option>
-                            <option>Drama</option>
+                        <select onChange={handleChangeG}>
+                            {listado?.map(cat=><option key={cat.id} value={cat.id}>{cat.name}</option>)}
                         </select>
                         <NavLink to={url_genero}>
                             <span className="genero">Buscar</span>
