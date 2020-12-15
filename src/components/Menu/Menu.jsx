@@ -31,14 +31,22 @@ const Menu = props =>{
     }
     let url_genero = `/genero/${genero}`; 
 
+    
+
     return <div className="main">
                 <div className="menu">
-                    <NavLink to="/popular">
+                    <NavLink to={{
+                        pathname:'/popular',
+                        state: listado        
+                }}>
                         <span className="populares">Películas Populares</span>
                     </NavLink>
                     <div>
                         <input type="text" id="titulo" placeholder="Indica el título..." value={titulo} onChange={handleChangeT} />
-                        <NavLink to={url_titulo}>
+                        <NavLink to={{
+                            pathname: url_titulo,
+                            state: listado
+                        }}>
                             <span className="titulo">Buscar</span>
                         </NavLink>
                     </div>
@@ -46,7 +54,10 @@ const Menu = props =>{
                         <select onChange={handleChangeG}>
                             {listado?.map(cat=><option key={cat.id} value={cat.id}>{cat.name}</option>)}
                         </select>
-                        <NavLink to={url_genero}>
+                        <NavLink to={{
+                            pathname: url_genero,
+                            state: listado
+                        }}>
                             <span className="genero">Buscar</span>
                         </NavLink>                      
                     </div>

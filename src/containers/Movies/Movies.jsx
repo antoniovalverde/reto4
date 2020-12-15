@@ -6,9 +6,9 @@ import './Movies.scss';
 const Movies = props =>{
     const movieType = props.match.params.movieType;
     const [movies,setMovies] = useState([])
-    //const generos = g.data.genres
 
     const url = props.match.params.title;
+    const listado = props.location.state;
 
     let path = '';
     if(movieType === 'popular'){
@@ -35,7 +35,7 @@ const Movies = props =>{
     },[url])
 
     return <div className="movies">
-        {movies?.map(movie=><Movie key={movie.id} movie={movie}/>)}
+        {movies?.map(movie=><Movie key={movie.id} list={listado} movie={movie}/>)}
     </div>
 }
 

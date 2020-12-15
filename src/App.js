@@ -7,16 +7,16 @@ import Movies from './containers/Movies/Movies.jsx';
 
 function App() {
   return (
-    <div className="peliculas">
-      <BrowserRouter>
-        <Header/>
-        <Menu/>
-        <Switch>
-          <Route path="/:movieType/:title?" component={Movies} exact/>
-        </Switch>
-        <Footer/>
-      </BrowserRouter>
-    </div>
+      <div className="peliculas">
+        <BrowserRouter>
+          <Header/>
+          <Menu/>
+          <Switch>
+            <Route path="/:movieType/:title?" component={Movies} exact/>
+          </Switch>
+          <Footer/>
+        </BrowserRouter>
+      </div>
   );
 }
 
