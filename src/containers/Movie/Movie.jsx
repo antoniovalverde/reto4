@@ -5,6 +5,8 @@ const Movie = /*({movie})*/props => {
 
     let generos = props.movie.genre_ids;
 
+    let seri = props.ser;
+
     let total_generos = '';
 
     let j=0;
@@ -25,9 +27,9 @@ const Movie = /*({movie})*/props => {
     }
 
     return <div className="movie">
-        <h2>{props.movie.title}</h2>
-        <h3>{props.movie.original_title}</h3>
-        <p><strong>Fecha de lanzamiento:</strong> {props.movie.release_date}</p>
+        <center><h2>{seri === 0 ? props.movie.title : props.movie.name}</h2></center>
+        <center><h3>{seri === 0 ? props.movie.original_title : props.movie.original_name}</h3></center>
+        <p><strong>Fecha de lanzamiento:</strong> {seri === 0 ? props.movie.release_date: props.movie.first_air_date}</p>
         <img src={"http://image.tmdb.org/t/p/w200" + props.movie.poster_path} alt=""/>
         <p><strong>Sinopsis:</strong> {props.movie.overview}</p>
         <p><strong>Género:</strong> {total_generos}</p>

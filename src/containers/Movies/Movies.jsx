@@ -7,11 +7,13 @@ const Movies = props =>{
     const movieType = props.match.params.movieType;
     const [movies,setMovies] = useState([])
 
-    const url = props.match.params.title;
+    let url = props.match.params.title;
     const listado = props.location.state;
 
     let path = '';
+    let es_serie = 0;
     if(movieType === 'popular'){
+        url = '¬¬¬€~#';
         path = `https://api.themoviedb.org/3/movie/${movieType}?api_key=f6c510b3b52b2f6efd5ed11ca30c9c4d&language=es-ES`;
 
     }else if(movieType === 'titulo'){
@@ -29,14 +31,18 @@ const Movies = props =>{
         let el_titulo = props.match.params.title;
         const replaced = el_titulo.split(' ').join('+');
         //console.log(replaced)
-        path = `https://api.themoviedb.org/3/search/tv?api_key=f6c510b3b52b2f6efd5ed11ca30c9c4d&language=es-ES&page=1&include_adult=false&query=${replaced}`;
+        path = `https://api.themoviedb.org/3/search/tv?api_key=f6c510b3b52b2f6efd5ed11ca30c9c4d&language=es-ES&page=1&include_adult=false&query=${replaced}` /*`https://api.themoviedb.org/3/discover/movie?api_key=f6c510b3b52b2f6efd5ed11ca30c9c4d&language=es-ES&page=1&include_adult=false&vote_count.gte=20000&sort_by=vote_count.desc`*/;
+        es_serie = 1;
+    }else if(movieType === 'votadas'){
+        url = '@#~€€~@';
+        path = `https://api.themoviedb.org/3/discover/movie?api_key=f6c510b3b52b2f6efd5ed11ca30c9c4d&language=es-ES&page=1&include_adult=false&vote_count.gte=10000&sort_by=vote_count.desc`;
     }
 
     useEffect(()=>{
         axios.get(path)
         .then(res =>{
             let datos = [];
-            if(movieType === 'popular'){
+            if(movieType === 'popular' || movieType === 'votadas'){
                 const limit = 10;
                 datos = res.data.results.slice(0, limit)
             }else{
@@ -50,7 +56,7 @@ const Movies = props =>{
     },[url])
 
     return <div className="movies">
-        {movies?.map(movie=><Movie key={movie.id} list={listado} movie={movie}/>)}
+        {movies?.map(movie=><Movie key={movie.id} ser={es_serie} list={listado} movie={movie}/>)}
     </div>
 }
 

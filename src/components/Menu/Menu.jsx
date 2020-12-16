@@ -46,6 +46,12 @@ const Menu = props =>{
                 }}>
                         <span className="populares">10 + Populares</span>
                     </NavLink>
+                    <NavLink to={{
+                        pathname:'/votadas',
+                        state: listado        
+                    }}>
+                        <span className="votadas">10 + Votadas</span>
+                    </NavLink>
                     <div>
                         <input type="text" id="titulo" placeholder="Indica el título..." value={titulo} onChange={handleChangeT} />
                         <NavLink to={{
