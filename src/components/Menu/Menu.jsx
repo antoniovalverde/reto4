@@ -5,8 +5,9 @@ import './Menu.scss';
 
 const Menu = props =>{
     const [titulo, setTitulo] = useState();
-    const [genero, setGenero] = useState('37');
+    const [genero, setGenero] = useState('28');
     const [listado, setListado] = useState([]);
+    const [serie, setSerie] = useState();
 
     const handleChangeT = e => {
         setTitulo(e.target.value) 
@@ -14,6 +15,10 @@ const Menu = props =>{
 
     const handleChangeG = e => {
         setGenero(e.target.value) 
+    }
+
+    const handleChangeS = e => {
+        setSerie(e.target.value) 
     }
 
     useEffect(() => {
@@ -39,7 +44,7 @@ const Menu = props =>{
                         pathname:'/popular',
                         state: listado        
                 }}>
-                        <span className="populares">Películas Populares</span>
+                        <span className="populares">10 + Populares</span>
                     </NavLink>
                     <div>
                         <input type="text" id="titulo" placeholder="Indica el título..." value={titulo} onChange={handleChangeT} />
@@ -60,6 +65,15 @@ const Menu = props =>{
                         }}>
                             <span className="genero">Buscar</span>
                         </NavLink>                      
+                    </div>
+                    <div>
+                        <input type="text" id="serie" placeholder="Indica el título de la serie..." value={serie} onChange={handleChangeS} />
+                            <NavLink to={{
+                                pathname: '/serie/' + serie,
+                                state: listado
+                            }}>
+                                <span className="serie">Buscar</span>
+                            </NavLink> 
                     </div>
                 </div>
             </div>
