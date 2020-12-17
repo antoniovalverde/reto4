@@ -58,7 +58,7 @@ const Menu = props =>{
                             pathname: url_titulo,
                             state: listado
                         }}>
-                            <span className="titulo">Buscar</span>
+                            <span className="titulo">Buscar Película</span>
                         </NavLink>
                     </div>
                     <div>
@@ -69,17 +69,17 @@ const Menu = props =>{
                             pathname: url_genero,
                             state: listado
                         }}>
-                            <span className="genero">Buscar</span>
+                            <span className="genero">Buscar Película</span>
                         </NavLink>                      
                     </div>
-                    <div>
-                        <input type="text" id="serie" placeholder="Indica el título de la serie..." value={serie} onChange={handleChangeS} />
-                            <NavLink to={{
-                                pathname: '/serie/' + serie,
-                                state: listado
-                            }}>
-                                <span className="serie">Buscar</span>
-                            </NavLink> 
+                    <div id="containerseries">
+                        <input type="text" id="serie" placeholder="Indica el título..." value={serie} onChange={handleChangeS} />
+                        <NavLink to={{
+                            pathname: '/serie/' + serie,
+                            state: listado
+                        }}>
+                            <span className="serie">Buscar Serie</span>
+                        </NavLink> 
                     </div>
                 </div>
             </div>

@@ -29,7 +29,10 @@ const Movies = props =>{
         path = `https://api.themoviedb.org/3/discover/movie?api_key=f6c510b3b52b2f6efd5ed11ca30c9c4d&language=es-ES&page=1&include_adult=false&with_genres=${replaced}`
     }else if(movieType === 'serie'){
         let el_titulo = props.match.params.title;
-        const replaced = el_titulo.split(' ').join('+');
+        let replaced = 'undefined';
+        if(el_titulo !== undefined){
+            replaced = el_titulo.split(' ').join('+');
+        }
         //console.log(replaced)
         path = `https://api.themoviedb.org/3/search/tv?api_key=f6c510b3b52b2f6efd5ed11ca30c9c4d&language=es-ES&page=1&include_adult=false&query=${replaced}` /*`https://api.themoviedb.org/3/discover/movie?api_key=f6c510b3b52b2f6efd5ed11ca30c9c4d&language=es-ES&page=1&include_adult=false&vote_count.gte=20000&sort_by=vote_count.desc`*/;
         es_serie = 1;

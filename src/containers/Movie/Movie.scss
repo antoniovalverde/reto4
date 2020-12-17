@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
+
 .movie{
     display: flex;
     flex-direction: column;
@@ -7,6 +9,7 @@
     justify-content: space-between;
     border-radius: 0.3em;
     background-color: grey;
+    font-family: 'Sniglet', cursive;
 
     img{
         width: 80%;
