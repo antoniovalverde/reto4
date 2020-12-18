@@ -28,11 +28,11 @@ géneros asociados y el número de votos.
 
 ## ⚙️ Herramientas utilizadas 
 
-React - Como librería principal en el frontend
-Sass - Para los estilos del sitio
-React Route - Para gestionar las rutas dináminas en el proyecto
-Axios - Usado para realizar las llamadas a la API de forma asíncrona
-Hooks - Utilizados para guardar los diferentes estados de los componentes
+* React - Como librería principal en el frontend
+* Sass - Para los estilos del sitio
+* React Route - Para gestionar las rutas dináminas en el proyecto
+* Axios - Usado para realizar las llamadas a la API de forma asíncrona
+* Hooks - Utilizados para guardar los diferentes estados de los componentes
 
 
 ## 🚀 Demo 
