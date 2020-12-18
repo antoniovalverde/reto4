@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# VIDEOCLUB
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img src="src/img/preview.jpg" width="600" alt="preview">
+</p>
 
-## Available Scripts
+Aplicación Videoclub. A través de ella podemos interactuar con la API de TheMovieDB y obtener datos relativos a dicha
+BBDD de películas y series de TV.
 
-In the project directory, you can run:
+## 🛠️ Instalación
 
-### `npm start`
+Clone el repositorio y despliéguelo en su servidor.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+git clone https://github.com/antoniovalverde/reto4.git
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 💻 Uso
 
-### `npm test`
+En el menú superior tenemos todas las herramientas de interacción con el usuario. Disponemos de dos botones para
+mostrar las 10 películas más populares o las 10 películas más votadas. A su vez, mediante un desplegable podemos
+filtrar las películas para mostrarlas por género. También, gracias a dos casillas de texto, podemos realizar
+búsquedas de películas y series por su título o título original. Finalmente, una vez realizada cualquiera de estas
+acciones, se nos mostrarán las películas o series que coincidan con nuestros criterios de búsqueda. En ellas se
+mostrará su título, título original, fecha de lanzamiento, imagen relativa a la película o serie, sinopsis,
+géneros asociados y el número de votos.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## ⚙️ Herramientas utilizadas 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+React - Como librería principal en el frontend
+Sass - Para los estilos del sitio
+React Route - Para gestionar las rutas dináminas en el proyecto
+Axios - Usado para realizar las llamadas a la API de forma asíncrona
+Hooks - Utilizados para guardar los diferentes estados de los componentes
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Demo 
 
-### `npm run eject`
+Aquí puedes probar mi proyecto [DEMO](https://antoniovalverde.github.io/reto4/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🍰 Contribuciones
+La ayuda es bienvenida, así como los consejos y demás. No seáis muy duros ya que se trata de mi segundo proyecto en React como parte de un reto del bootcamp que estoy cursando.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## ✨ License
+[MIT](https://choosealicense.com/licenses/mit/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center">
+Desarrollado con ❤️ por Antonio Valverde en España. 
+</p>
